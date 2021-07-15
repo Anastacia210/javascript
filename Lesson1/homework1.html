@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // - Створити змінні. Присвоїти кожному з них значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
+    //     Вивести кожну змінну за допомогою: console.log , alert, document.write
+    // - Переприсвоїти кожну змінну з завдання вище на будь які довільні значення.
+    //     Вивести кожну змінну за допомогою: console.log , alert, document.write
+
+
+    // let var1 = 'hello';
+    // var1 = 'it';
+    // // document.write('hello');
+    // document.write('it');
+    // // console.log('hello');
+    // console.log('it');
+    // alert(var1);
+    //
+    // let var2 = 'owu';
+    // var2 = 'is';
+    // // document.write('owu');
+    // document.write('is');
+    // // console.log('owu');
+    // console.log('is');
+    // alert(var2);
+    //
+    // let var3 = 'com';
+    // var3 = 'summer';
+    // // document.write('com');
+    // document.write('summer');
+    // // console.log('com');
+    // console.log('summer');
+    // alert(var3);
+    //
+    // let var4 = 'ua';
+    // var4 = 'time';
+    // // document.write('ua');
+    // document.write('time');
+    // // console.log('ua');
+    // console.log('time');
+    // alert(var4);
+    //
+    // let var5 = 1;
+    // var5 = 7;
+    // // document.write(1);
+    // document.write(7);
+    // // console.log(1);
+    // console.log(7);
+    // alert(var5);
+    //
+    // let var6 = 10;
+    // var6 = 17;
+    // // document.write(10);
+    // document.write(17);
+    // // console.log(10);
+    // console.log(17);
+    // alert(var6);
+    //
+    // let var7 = -999;
+    // var7 = -1720;
+    // // document.write(-999);
+    // document.write(-1720);
+    // console.log(-999);
+    // console.log(-1720);
+    // alert(var7);
+    //
+    // let var8 = 123;
+    // var8 = 789;
+    // // document.write(123);
+    // document.write(789);
+    // // console.log(123);
+    // console.log(789);
+    // alert(var8);
+    //
+    // let var9 = 3.14;
+    // var9 = 7.25;
+    // // document.write(3.14);
+    // document.write(7.25);
+    // // console.log(3.14);
+    // console.log(7.25);
+    // alert(var9);
+    //
+    // let var10 = 2.7;
+    // var10 = 3.5;
+    // // document.write(2.7);
+    // document.write(3.5);
+    // // console.log(2.7);
+    // console.log(3.5);
+    // alert(var10);
+    //
+    // let var11 = 16;
+    // var11 = 19;
+    // // document.write(16);
+    // document.write(19);
+    // // console.log(16);
+    // console.log(19);
+    // alert(var11);
+    //
+    // let var12 = true;
+    // var12 = false;
+    // // document.write(true);
+    // document.write(false);
+    // // console.log(true);
+    // console.log(false);
+    // alert(var12);
+    //
+    // let var13 = false;
+    // var13 = true;
+    // // document.write(false);
+    // document.write(true);
+    // // console.log(false);
+    // console.log(true);
+    // alert(var13);
+
+    // - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. Зконкатенувати їх в одну змінну person.
+
+    let firstName = 'Анастасия';
+    let middleName = 'Сергеевна';
+    let lastName = 'Яцюк';
+    let person = (`${firstName} ${middleName} ${lastName}`);
+    console.log(`${firstName} ${middleName} ${lastName}`);
+
+    // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками.
+    //     Вивести "Вітаю *Імя* *По батькові*. Тобі *вік* років".
+
+    // let uName = prompt("Анастасія");
+    // let uMiddleName = prompt("Сергіївна");
+    // let uAge = prompt("34");
+    // alert ("Вітаю " + uName + uMiddleName + ". " + "Тобі " + uAge + "років.")
+
+    // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+    //     let a = 100; let b = '100'; let c = true;
+
+    let a = 100;
+    let b = '100';
+    let c = true;
+    console.log(100);
+    console.log('100');
+    console.log(true);
+
+    // - Поставет відповідний оператор в виразах що б вийшов відповідний результат.
+    //     В однакових виразаї не використовувати однакові оператори!!!
+
+    // 5 ? 6 -> true
+    // 5 ? 6 -> false
+    // 5 ? 6 -> false
+    // 5 ? 6 -> false
+
+    trust = 5 < 6;
+    console.log(trust);
+
+    trust = 5 > 6;
+    console.log(trust);
+
+    trust = 5 === 6;
+    console.log(trust);
+
+    trust = 5 == 6;
+    console.log(trust);
+
+    // 10 ? 10 -> true
+    // 10 ? 10 -> true
+    // 10 ? 10 -> false
+    // 10 ? 10 -> false
+    // 10 ? 10 -> false
+
+    trust = 10 == 10;
+    console.log(trust);
+
+    trust = 10 == 10;
+    console.log(trust);
+
+    trust = 10 != 10;
+    console.log(trust);
+
+    trust = 10 > 10;
+    console.log(trust);
+
+    trust = 10 < 10;
+    console.log(trust);
+
+    // 123 ? '123' -> false
+    // 123 ? '123' -> true
+
+    trust = 123 === '123';
+    console.log(trust);
+    trust = 123 =='123';
+    console.log(trust);
+
+
+</script>
+</body>
+</html>
