@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+<script>
+
+    // --створити масив з:
+    //     - з 5 числових значень
+    // - з 5 стічкових значень
+    // - з 5 значень стрічкового, числового та булевого типу
+    // - та вивести його в консоль
+
+    let usersAge = [
+        {age: 31},
+        {age: 28},
+        {age: 25},
+        {age: 19},
+        {age: 16}
+    ];
+    console.log(usersAge);
+
+    let usersName = [
+        {name: 'anna'},
+        {name: 'maria'},
+        {name: 'anatoliy'},
+        {name: 'nickolay'},
+        {name: 'katya'}
+    ];
+    console.log(usersName);
+
+    let users = [
+        {name: 'anna', age: 31, status: false},
+        {name: 'maria', age: 28, status: true},
+        {name: 'anatoliy', age: 25, status: false},
+        {name: 'nickolay', age: 19, status: true},
+        {name: 'katya', age: 16, status: false}
+    ];
+    console.log(users);
+
+    // -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
+
+    let coffee = ['Latte', 'Americano', 'Espresso', 'Capuccino', 'Cold brew', 'Flat white'];
+
+    console.log(coffee [0]);
+    console.log(coffee [1]);
+    console.log(coffee [2]);
+    console.log(coffee [3]);
+    console.log(coffee [4]);
+    console.log(coffee [5]);
+
+    // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
+    // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+    // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+    // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+
+
+    for (let i = 0; i < 10; i++) {
+        document.write(`<div>${i} - Lorem ipsum dolor sit amet.</div>`);
+    }
+
+    for (let j = 0; j < 10; j++) {
+        document.write(`<div>${j} - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, impedit ${j}.</div>`);
+    }
+
+    let i = 0;
+    while (i < 20) {
+        i++;
+        document.write(i + `<div>
+                                <h1>hello okten</h1>
+            </div>`);
+    }
+
+    let x = 0;
+    while (x < 20) {
+        x++
+        document.write(x + `<div>
+                                <h1>hello okten${x}</h1>
+            </div>`);
+    }
+
+    // - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
+    // - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+    // - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+    // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
+    // - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
+    // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
+
+    let nums = [
+        13, 25, 33, 42, 55, 76, 85, 97, 103, 215
+    ]
+    console.log(nums);
+
+    str = [
+        'coffee', 'tea', 'chocolate','cocoa', 'lemonade', 'milk', 'herbal tea', 'mineral water', 'compote', 'ginger ale'
+    ]
+    console.log(str);
+
+    items = [
+        'coffee', 13, 16, '37', 'lemonade', '55', true, false, 'milk', 99
+    ]
+    console.log(items);
+
+    massive = ['coffee', 13, 16, '37', 'lemonade', '55', true, false, 'milk', 99];
+    for (a = 0; a < massive.length; a++)
+        if (typeof massive[a] === `boolean`){
+            console.log(massive[a])
+    };
+
+    massive = ['coffee', 13, 16, '37', 'lemonade', '55', true, false, 'milk', 99];
+    for (b = 0; b < massive.length; b++)
+    if (typeof massive[b] === `number`){
+        console.log(massive[b])
+    };
+
+    massive = ['coffee', 13, 16, '37', 'lemonade', '55', true, false, 'milk', 99];
+    for (c = 0; c < massive.length; c++)
+    if (typeof massive[c] === `string`){
+        console.log(massive[c])
+    };
+
+    // - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+
+    emptyMassive = ["cat", true, 113, false, 25, "dog", true, 714, false, "asdfgh"];
+    emptyArr = [];
+    emptyArr[0] = "cat";
+    emptyArr[1] = true;
+    emptyArr[2] = 113;
+    emptyArr[3] = false;
+    emptyArr[4] = 25;
+    emptyArr[5] = "dog";
+    emptyArr[6] = true;
+    emptyArr[7] = 714;
+    emptyArr[8] = false;
+    emptyArr[9] = "asdfgh";
+    for (i = 0; i < emptyArr.length; i++){
+        console.log(emptyArr[i]);
+    };
+
+    // - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+    // - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+    // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+    // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+    // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+
+    for (let i = 0; i < 10; i++){
+        console.log(`step :`, i);
+        document.write(`step :`, i)
+    };
+
+    for (let j = 0; j < 100; j++){
+        console.log(`step :`, j );
+        document.write(`step : ${j}`)
+    };
+
+    for (let n = 0; n < 100; n++){
+        console.log(`step :`, n);
+        document.write(`step : ${n}`);
+        n+=2;
+    };
+
+    for (let m = 0; m < 100; m++){
+        if (m%2 === 0) {
+            console.log(`step :`, m)
+            document.write(`step : ${m}`);
+        }
+    };
+
+    for (let t = 0; t < 100; t++){
+        if (t%2 === 1){
+            console.log(`step :`, t);
+            document.write(`step : ${t}`);
+        }
+    };
+
+    // - Дано 2 масиви з рівною кількістю об'єктів.
+    // Масиви:
+        let usersWithId = [
+            {id: 1, name: 'vasya', age: 31, status: false},
+            {id: 2, name: 'petya', age: 30, status: true},
+            {id: 3, name: 'kolya', age: 29, status: true},
+            {id: 4, name: 'olya', age: 28, status: false}
+        ];
+
+    let citiesWithId = [
+        {user_id: 3, country: 'USA', city: 'Portland'},
+        {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+        {user_id: 2, country: 'Poland', city: 'Krakow'},
+        {user_id: 4, country: 'USA', city: 'Miami'}
+    ];
+
+    // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+    //     Записати цей об'єкт в новий масив
+    // Example:
+
+        let usersWithCities = [
+            {
+                id: 1, // <===
+                name: 'vasya',
+                age: 31,
+                status: false,
+                address: {
+                    user_id: 1, // <===
+                    country: 'Ukraine',
+                    city: 'Ternopil'
+                }
+            },
+            {
+                id: 2,
+                name: 'petya',
+                age: 30,
+                status: true,
+                address: {
+                    user_id: 2,
+                    country: 'Poland',
+                    city: 'Krakow'
+                }
+            },
+            {
+                id: 3,
+                name: 'kolya',
+                age: 29,
+                status: true,
+                address: {
+                    user_id: 3,
+                    country: 'USA',
+                    city: 'Portland'
+                }
+            },
+            {
+                id: 4,
+                name: 'olya',
+                age: 28,
+                status: true,
+                address: {
+                    user_id: 4,
+                    country: 'USA',
+                    city: 'Miami'
+                }
+            }
+        ]
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
