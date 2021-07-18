@@ -1,0 +1,27 @@
+.simp {
+    /*display: flex;*/
+    margin: 10px;
+}
+img {
+    height: 200px;
+    border: 1px solid blue;
+    border-radius: 10%;
+}
+.about {
+    background: cornflowerblue;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+.text {
+    background-color: darkblue;
+    color: bisque;
+    width: 200px;
+}
+.title {
+    background-color: pink;
+    margin: 5px;
+}
+.prod {
+    display: flex;
+    justify-content: space-evenly;
+}
