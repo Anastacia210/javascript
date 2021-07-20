@@ -1,0 +1,10 @@
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.post-card {
+    background: aliceblue;
+    margin: 2px;
+    width: 18%;
+
+}
