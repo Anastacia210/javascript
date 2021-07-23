@@ -10,7 +10,7 @@ console.log(res);
 <!-- - створити функцію яка обчислює та повертає площу кола-->
 
 function circle(r) {
-    return (Math.PI * ((r) * (r)));
+    return Math.PI * (r * r);
 }
 
 let res1 = circle(4);
@@ -70,6 +70,10 @@ createUl('Dreams come true');
 
 // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
+let liElems = [1, 2, 3];
+for (let liElem of liElems) {
+console.log(liElem);
+
 function writer(msg, sym) {
     document.write(
         `<ul>
@@ -78,16 +82,17 @@ function writer(msg, sym) {
             <li>${msg}${sym}</li>
         </ul>`
     );
+};
+    writer('Dreams','!');
+    writer('come','!');
+    writer('true','!');
 }
-writer('Dreams','!');
-writer('come','!');
-writer('true','!');
+
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
 let massives = ['JS', 123, true, 'html', 345];
-for (let massive of massives) {
-}
+
 document.write('<ul>');
 for (let massive of massives) {
     document.write(`<li>${massives}</li>`);
