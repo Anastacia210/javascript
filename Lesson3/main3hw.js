@@ -74,15 +74,15 @@ createUl('Dreams come true');
 function writer(msg, sym) {
     document.write('<ul>');
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i<sym; i++) {
         document.write(
-            `<li>${msg} ${sym}</li>`
+            `<li>${i + 1} - ${msg}</li>`
         );
     }
     document.write('</ul>');
 }
 
-    writer('Dreams come true ', '!');
+    writer('Dreams come true !', 3);
 
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
