@@ -70,23 +70,19 @@ createUl('Dreams come true');
 
 // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
-let liElems = [1, 2, 3];
-for (let liElem of liElems) {
-console.log(liElem);
 
 function writer(msg, sym) {
-    document.write(
-        `<ul>
-            <li>${msg}${sym}</li>
-            <li>${msg}${sym}</li>
-            <li>${msg}${sym}</li>
-        </ul>`
-    );
-};
-    writer('Dreams','!');
-    writer('come','!');
-    writer('true','!');
+    document.write('<ul>');
+
+    for (let i = 0; i < 3; i++) {
+        document.write(
+            `<li>${msg} ${sym}</li>`
+        );
+    }
+    document.write('</ul>');
 }
+
+    writer('Dreams come true ', '!');
 
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
