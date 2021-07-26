@@ -101,13 +101,9 @@ console.log(users);
 // -Взяти масив цей  User[] та: Відфільтрувати , залишивши тільки об'єкти з парними id (filter) та
 // Відсортувати його по id. по зростанню (sort)
 
-let filterUser = [];
-for (const user2 of users){
-    if(user2.id%2 == 0){
-        filterUser.push(user2);
-    }
-}
-  console.log(filterUser);
+let filterUserId = users.filter(user => user.id%2 === 0);
+
+  console.log(filterUserId);
 
 let sort = users.sort(function (user1,user2){
     return user1.id - user2.id;
