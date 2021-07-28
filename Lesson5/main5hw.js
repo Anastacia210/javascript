@@ -23,18 +23,22 @@ console.log(firstDiv.classList);
 
 // -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік",
 // одна вивдоить текст елементу, інша довільний ьексь
-const allRules = document.getElementsByClassName('fc_rules');
-console.log(allRules);
+let liElems = document.getElementsByClassName('fc_rules')
+for (const liElem of liElems) {
+    liElem.addEventListener('click',() =>{
+        console.log(liElem.innerText);
+    });
+    liElem.addEventListener('click', () => {
+    console.log('some random text');
+    });
+}
 
-allRules.onclick = function (ev) {
-    console.log(ev.innerHTML = '');
-    console.log(ev.innerHTML = 'Правила Бойцовского Клуба');
-};
-// allRules.onclick = function (ev) {
-//     console.log(ev.innerHTML = 'Правила Бойцовского Клуба');
-// }
 // -- поміняти колір тексту у всіх елементів fc_rules на червоний---------------------------
 
+let fc_rulesElements = document.getElementsByClassName('fc_rules');
+for (let fc_RulesElement of fc_rulesElements){
+    fc_RulesElement.style.color = 'red';
+}
 
 
 
