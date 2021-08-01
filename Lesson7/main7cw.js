@@ -8,118 +8,176 @@
 //     Прикнутись - 0.3с
 // Поснідати - 1с
 // Піти в душ - 0.5с
-// Дочекатись автобус - 3с
+// Час на навчання - 0.7с
 // Пообідати - 1с
-//
+//...
 // І так далі
 
-function morning(time, cb) {
-    setTimeout(() =>{
-        console.log('Wake Up!');
-        if (time < 8) {
-            console.log('Проснись!')
-        } else {
-            console.log('Спи дальше!')
-        }
-    }, 300)
-}
-morning(7)
-
-function dayStart(time) {
+function dailyPlan(time) {
     return new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log('Время завтракать!');
-        if (time > 8) {
-        console.log('Oh, no!');
-        reject ('Сегодня без кофе');
-        } else {
-            console.log('Успеем выпить кофе')
-            resolve ('Coffee!')
-        }
+        setTimeout(() => {
+            console.log('Wake up!');
+            if (time < 8) {
+                console.log(`Новый день`);
+                reject('Ложиться надо раньше');
+            } else {
+                resolve('Ура! Кофе!');
+            }
+        }, 300);
     });
-    }, 1000)
 }
-dayStart(8)
+
+function dayStart() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Время завтракать!');
+            resolve('Coffee!');
+        }, 500);
+    });
+}
 
 function shower () {
+    return new Promise((resolve, reject) => {
     setTimeout(() => {
-        console.log('Пора принять душ')
-    }, 500)
+        console.log('Пора принять душ');
+        resolve('Само не отпадет');
+    }, 400);
+    });
 }
-shower()
 
-function busStop (time) {
-    setTimeout(() => {
-        console.log('По делам')
-        if (time < 9) {
-            console.log('Жду автобус')
-        } else {
-            console.log('Вызываю такси')
-        }
-    }, 3000)
+function studyTime (status) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('It is time to learn something new');
+            if (status === 'false') {
+                console.log('Не выходит');
+                reject('плакать');
+            } else {
+                resolve('Наконец-то получилось');
+            }
+        }, 3000);
+    });
 }
-busStop(8)
 
-function work () {
-    setTimeout(() => {
-        console.log('Work')
-    }, 1000)
+function homeWork () {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Еще раз пересмотреть лекцию');
+            resolve('Надеяться, что поняла');
+        }, 1000);
+    });
 }
-work()
 
 function haveLunch () {
-    setTimeout(() => {
-        console.log('Приятного аппетита')
-    }, 1000)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Приятного аппетита');
+            resolve ('Отдых');
+        }, 1000);
+    });
 }
-haveLunch()
 
 function backToWork () {
-    setTimeout(() => {
-        console.log('Click, Click, Click')
-    }, 2000)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Click, Click, Click');
+            resolve('Work!');
+        }, 2000);
+    });
 }
-backToWork()
 
 function goHome (time) {
-    setTimeout(() => {
-        console.log('Пора домой!')
-        if(time > 18) {
-            console.log('Bye!')
-        } else {
-            console.log('Еще не конец рабочего дня!')
-        }
-    }, 1500)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Пора домой!');
+            if (time > 18) {
+                console.log('Bye!');
+                reject('Go home!');
+            } else {
+                resolve('Еще не конец рабочего дня!');
+            }
+        }, 1500);
+    });
 }
-goHome(18)
 
-function busStop2 (time) {
-    setTimeout(() => {
-        console.log('В кино!')
-        if (time < 20) {
-            console.log('Успеваем на фильм')
-        } else {
-            console.log('Сходим в другой раз')
-        }
-    }, 800)
+function cinema (money) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('В кино!');
+            if (money > 200) {
+                console.log('Успеваем на фильм');
+                reject('Выбираем');
+            } else {
+                resolve('Сходим в другой раз');
+            }
+        }, 800);
+    });
 }
-busStop2(19)
 
-function dinner (money) {
-    setTimeout(() => {
-        console.log('Пора ужинать')
-        if (money > 500) {
-            console.log('Куда пойдем?')
-        } else {
-            console.log('Покушаем дома)')
-        }
-    }, 1300)
+function dinner () {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Пора ужинать');
+            resolve('Главное не переесть на ночь');
+        }, 1300);
+    });
 }
-dinner(700)
 
 function timeToSleep () {
-    setTimeout(() => {
-        console.log('Goodnight!')
-    }, 500)
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Goodnight!');
+            resolve('Завтра будет новый день');
+        }, 500);
+    });
 }
-timeToSleep()
+
+dailyPlan('true')
+    .then(value => {
+        console.log(value);
+        return dayStart();
+    })
+
+    .then(value => {
+        console.log(value);
+        return shower();
+    })
+    .then(value => {
+        console.log(value);
+        return studyTime();
+    })
+    .then(value => {
+        console.log(value);
+        return homeWork();
+    })
+    .then(value => {
+        console.log(value);
+        return haveLunch();
+    })
+    .then(value => {
+        console.log(value);
+        return backToWork();
+    })
+    .then(value => {
+        console.log(value);
+        return goHome();
+    })
+    .then(value => {
+        console.log(value);
+        return cinema();
+    })
+    .then(value => {
+        console.log(value);
+        return dinner();
+    })
+    .then(value => {
+        console.log(value);
+        return timeToSleep();
+    })
+    .then(value => {
+        console.log(value);
+    })
+    .catch(reason => {
+        console.warn(reason);
+        console.error('Ложиться надо раньше');
+    })
