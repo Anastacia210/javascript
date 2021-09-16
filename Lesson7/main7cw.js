@@ -104,7 +104,7 @@ function cinema (money) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('В кино!');
-            if (money > 200) {
+            if (money > 500) {
                 console.log('Успеваем на фильм');
                 reject('Выбираем');
             } else {
@@ -131,53 +131,76 @@ function timeToSleep () {
         }, 500);
     });
 }
+async function day () {
+    try{
+    const allDay = await Promise.all([
+        dailyPlan(),
+        dayStart(),
+        shower(),
+        studyTime(),
+        homeWork(),
+        haveLunch(),
+        backToWork(),
+        goHome(),
+        cinema(),
+        dinner(),
+        timeToSleep()
+    ]);
+    } catch (reason) {
+        console.warn('ERRR')
+    }
+}
+day();
 
-dailyPlan('true')
-    .then(value => {
-        console.log(value);
-        return dayStart();
-    })
 
-    .then(value => {
-        console.log(value);
-        return shower();
-    })
-    .then(value => {
-        console.log(value);
-        return studyTime();
-    })
-    .then(value => {
-        console.log(value);
-        return homeWork();
-    })
-    .then(value => {
-        console.log(value);
-        return haveLunch();
-    })
-    .then(value => {
-        console.log(value);
-        return backToWork();
-    })
-    .then(value => {
-        console.log(value);
-        return goHome();
-    })
-    .then(value => {
-        console.log(value);
-        return cinema();
-    })
-    .then(value => {
-        console.log(value);
-        return dinner();
-    })
-    .then(value => {
-        console.log(value);
-        return timeToSleep();
-    })
-    .then(value => {
-        console.log(value);
-    })
-    .catch(reason => {
-        console.warn(reason);
-        console.error('Ложиться надо раньше');
-    })
+
+// dailyPlan('true')
+//     .then(value => {
+//         console.log(value);
+//         return dayStart();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return shower();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return studyTime();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return homeWork();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return haveLunch();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return backToWork();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return goHome();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return cinema();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return dinner();
+//     })
+//     .then(value => {
+//         console.log(value);
+//         return timeToSleep();
+//     })
+//     .then(value => {
+//         console.log(value);
+//     })
+//     .catch(reason => {
+//         console.warn(reason);
+//         console.error('Ложиться надо раньше');
+//     })
+
+

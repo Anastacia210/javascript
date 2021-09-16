@@ -1,6 +1,7 @@
 fetch(`https://jsonplaceholder.typicode.com/users/${post.id}/posts`)
     .then(value => value.json())
     .then(posts => {
+
         let postsBox = document.getElementsByClassName('posts-box')[0]
         for (const post of posts) {
             let divPost = document.createElement('div');
@@ -17,3 +18,6 @@ fetch(`https://jsonplaceholder.typicode.com/users/${post.id}/posts`)
             divPost.appendChild(postDetailsBtn)
         }
     })
+
+
+

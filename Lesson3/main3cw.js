@@ -134,7 +134,7 @@ const anotherKeys = []
 for (const object of driverAlex) {
     keys.push(...Object.keys(object))
 }
-// console.log(anotherKeys);
+console.log(anotherKeys);
 
 
 // // // - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
