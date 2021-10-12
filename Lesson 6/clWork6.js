@@ -8,7 +8,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         let comsBtn = document.createElement('button');
         comsBtn.innerText = 'comments';
         comsBtn.onclick = function (){
-            console.log('posts',post.id)
+            // console.log('posts',post.id)
 
             fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
                 .then(response => response.json())

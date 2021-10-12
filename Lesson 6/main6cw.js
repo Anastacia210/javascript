@@ -1,11 +1,5 @@
 fetch('https://jsonplaceholder.typicode.com/posts')
-    //     .then(function (response){
-    //     return response.json();
-    // })
-    //     .then(function (value) {
-    //     console.log(value);
-    // });
-    .then (response => response.json())
+    .then(response => response.json())
     .then(users => {
         let usersComment = document.getElementsByClassName('comments-box')[0];
         for (const user of users) {
